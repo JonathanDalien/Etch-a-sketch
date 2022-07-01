@@ -2,17 +2,36 @@ body {
     background-color: grey;
 }
 
-main {
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.grid {
+#grid {
     background-color: #fff;
     width: 500px;
     height: 500px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
+}
+
+.griditem {
+    user-select: none;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+#sizelabel {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+
+#colorlabel {
+    font-size: 1.6rem;
 }
