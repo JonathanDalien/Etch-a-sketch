@@ -1,15 +1,48 @@
 const sizevalue = document.getElementById("sizevalue");
 const sizeslider = document.getElementById("sizeslider");
 const grid = document.getElementById("grid")
+const color = document.getElementById("color");
+const erase = document.getElementById("btnErase");
 
-let currentColor = "#333333"
+
+let currentColor = color.value
 let currentSize = 16;
 
+
+let isErase = false;
+
+function activateErase() {
+    erase.classList.add("active")
+    isErase = true;
+    currentColor = "#ffffffff"
+}
+
+function deactivateErase() {
+    erase.classList.remove("active")
+    isErase = false;
+    currentColor = color.value
+}
+
+erase.addEventListener("click", () => {
+    if (!isErase) {
+        activateErase();
+    } else {
+        erase.classList.remove("active")
+        currentColor = color.value;
+        isErase = false;
+    }
+
+})
 
 function setCurrentSize(newSize) {
     currentSize = newSize;
 }
 
+color.oninput = (e) => {
+    currentColor = e.target.value
+    erase.classList.remove("active")
+    isErase = false;
+}
 
 
 sizeslider.onchange = (e) => changeSize(e.target.value)
@@ -33,6 +66,7 @@ function changeSize(value) {
     setCurrentSize(value);
     updateSizeValue(value)
     loadGrid(value)
+    deactivateErase();
 }
 
 

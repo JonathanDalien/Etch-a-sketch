@@ -21,16 +21,28 @@ body {
     user-select: none;
 }
 
+.title {
+    text-align: center;
+    font-size: 5rem;
+}
+
 .settings {
     display: flex;
     flex-direction: column;
     margin: 2rem;
 }
 
-#sizelabel {
+#sizelabel,
+#btnErase {
     margin-top: 2rem;
     font-size: 1.6rem;
 }
+
+.active {
+    background-color: green;
+}
+
+
 
 #colorlabel {
     font-size: 1.6rem;
