@@ -1,0 +1,18 @@
+body {
+    background-color: grey;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    background-color: #fff;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
