@@ -6,6 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 #grid {
@@ -15,6 +16,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    box-shadow: 2rem 2rem 5rem black;
 }
 
 .griditem {
@@ -38,12 +40,45 @@ body {
     font-size: 1.6rem;
 }
 
+#btnErase {
+    cursor: pointer;
+    border: none;
+    border-radius: .5rem;
+    transition: .5s;
+}
+
+#btnErase:hover {
+    transform: scale(1.2);
+}
+
 .active {
     background-color: green;
 }
 
-
+button,
+input {
+    width: 100%;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+}
 
 #colorlabel {
     font-size: 1.6rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 50px;
+    font-size: 20px;
 }
