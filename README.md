@@ -1,2 +1,2 @@
-# Etch-a-skeed
-Etch a skeed project from TheOdinProject
+# Etch-a-sketch
+Etch a sketch project from TheOdinProject
